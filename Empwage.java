@@ -2,24 +2,22 @@ package assignment1;
 
 public class Empwage {
 	public static void main(String[] args) {
-		 int wage_per_hour = 20;
-		  int full_day_hour = 8;
-		  int part_time_hour = 4;
-		  int isfulltime = 1;
-		  int parttime = 2;
-		  double empcheck = Math.floor((Math.random() * 10) %3);
-		  if(empcheck == isfulltime) {
-			  int salary = full_day_hour * wage_per_hour;
-			  System.out.println("daily employee wage for full  time:"+salary); 
-		  }
-		  
-		  else if (empcheck == parttime) {
-			  int salary1 = part_time_hour * wage_per_hour;
-			  System.out.println("daily employee wage for part time:"+salary1);
-		  }
-		  else {
-			  System.out.println("employee is absent");
-		  }
-
+		  int wageperhour = 20;
+			 int empworkhr;
+			 
+			 double empcheck = Math.floor((Math.random()*10)%3);
+			  int i = (int)empcheck;
+			  switch(i) {
+			  case 1:
+				  empworkhr = 8;
+				  break;
+			  case 2:
+				  empworkhr = 4;
+				  break;
+			  default:
+				 empworkhr = 0;
+			  }
+			 int salary = empworkhr * wageperhour;
+			 System.out.println("salary is :"+ salary);
 }
 }
